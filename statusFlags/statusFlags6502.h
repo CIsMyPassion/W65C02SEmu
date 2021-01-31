@@ -1,5 +1,5 @@
 #pragma once
-#include<../emu6502.h>
+#include<emu6502.h>
 
 struct emu6502::StatusFlags
 {
@@ -11,4 +11,4 @@ struct emu6502::StatusFlags
 	Byte Unused : 1;		//32: unused
 	Byte V : 1;			//64: overflow
 	Byte N : 1;			//128: negative
-}
+};

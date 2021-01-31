@@ -1,5 +1,5 @@
 #pragma once
-#include<../emu6502.h>
+#include<emu6502.h>
 
 struct emu6502::Memory
 {
