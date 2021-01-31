@@ -12,3 +12,7 @@ memory6502.o: memory/memory6502.h emu6502.h
 
 emu6502.o: emu6502.h
 	g++ -c -o obj/emu6502.o -I. emu6502.h
+
+clean:
+	rm obj/*
+	rm lib/*
