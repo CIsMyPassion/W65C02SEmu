@@ -1,2 +1,7 @@
+#lib project
 lib6502/obj/*
 lib6502/lib/*
+
+#test project
+test6502/obj/*
+test6502/bin/*
