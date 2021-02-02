@@ -1,7 +1,4 @@
-#lib project
-lib6502/obj/*
-lib6502/lib/*
-
-#test project
-test6502/obj/*
-test6502/bin/*
+lib6502/CMakeCache.txt
+lib6502/CMakeFiles/
+lib6502/cmake_install.cmake
+lib6502/Makefile
