@@ -1,5 +1,6 @@
 #include "cpu6502.h"
 
-void emu6502::CPU::execute(Memory memory)
+emu6502::s32 emu6502::CPU::execute(u32 cycles)
 {
+	return cycles - 1;
 }

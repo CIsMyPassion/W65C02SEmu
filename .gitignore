@@ -2,3 +2,4 @@ lib6502/CMakeCache.txt
 lib6502/CMakeFiles/
 lib6502/cmake_install.cmake
 lib6502/Makefile
+lib6502/lib/

@@ -18,5 +18,7 @@ struct emu6502::CPU
 		StatusFlags Flags;
 	};
 
-	void execute(Memory memory);
+	Memory memory;
+
+	s32 execute(u32 cycles);
 };
