@@ -4,5 +4,5 @@ project(emu6502)
 
 set_property(GLOBAL PROPERTY USE_FOLADERS ON)
 
-add_subdirectory(lib6502)
-add_subdirectory(test6502)
+add_subdirectory(6502Emu)
+add_subdirectory(6502Test)

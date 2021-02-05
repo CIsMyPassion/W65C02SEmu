@@ -1,7 +1,7 @@
 #pragma once
-#include<emu6502.h>
-#include<memory/memory6502.h>
-#include<statusFlags/statusFlags6502.h>
+#include"types6502.h"
+#include"memory6502.h"
+#include"statusFlags6502.h"
 
 struct emu6502::CPU
 {

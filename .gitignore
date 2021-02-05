@@ -1,16 +1,1 @@
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-Makefile
-
-lib6502/CMakeCache.txt
-lib6502/CMakeFiles/
-lib6502/cmake_install.cmake
-lib6502/Makefile
-lib6502/lib/
-
-test6502/CMakeCache.txt
-test6502/CMakeFiles/
-test6502/cmake_install.cmake
-test6502/Makefile
-test6502/bin
+build/
