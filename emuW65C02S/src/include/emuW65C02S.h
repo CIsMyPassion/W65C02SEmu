@@ -63,7 +63,24 @@ namespace W65C02S
 		BIT_A		= 0x2c,
 		AND_A		= 0x2d,
 		ROL_A		= 0x2e,
-		BBR3_P		= 0x2f
+		BBR3_P		= 0x2f,
+
+		BMI_P		= 0x30,
+		AND_Z_II_Y	= 0x31,
+		AND_Z_I		= 0x32,
+		Undefined33	= 0x33,
+		BIT_Z_I_X	= 0x34,
+		AND_Z_I_X	= 0x35,
+		ROL_Z_I_X	= 0x36,
+		RMB3_Z		= 0x36,
+		SEC			= 0x37,
+		AND_A_I_Y	= 0x38,
+		DEC_A		= 0x39,
+		Undefined3a	= 0x3a,
+		BIT_A_I_X	= 0x3b,
+		AND_A_I_X	= 0x3c,
+		ROL_A_I_X	= 0x3d,
+		BBR3_P		= 0x3f
 	};
 
 	struct Pin;
