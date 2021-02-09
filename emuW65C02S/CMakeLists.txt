@@ -10,12 +10,8 @@ else()
 endif()
 
 set(emuW65C02S_SOURCES
-	src/include/types6502.h
-	src/include/cpu6502.h
-	src/cpu/cpu6502.cpp
-	src/include/statusFlags6502.h
-	src/include/memory6502.h
-	src/include/6502Emu.h
+	src/include/emuW65C02S.h
+	src/cpuW65C02S.cpp
 )
 
 source_group("src" FILES $ {emuW65C02S_SOURCES})
