@@ -12,6 +12,60 @@ namespace W65C02S
 		HIGH = 0x1
 	};
 
+	enum OpCode : Byte
+	{
+		BRK 		= 0x00,
+		ORA_Z_II	= 0x01,
+		Undefined02	= 0x02,
+		Undefined03	= 0x03,
+		TSB_Z		= 0x04,
+		ORA_Z		= 0x05,
+		ASL_Z		= 0x06,
+		RMB0_Z		= 0x07,
+		PHP_S		= 0x08,
+		ORA_I		= 0x09,
+		ASL_ACC		= 0x0a,
+		Undefined0b	= 0x0b,
+		TSB_AI		= 0x0c,
+		ORA_AI		= 0x0d,
+		ASL_AI		= 0x0e,
+		BBR0_P		= 0x0f,
+		
+		BPL_P		= 0x10,
+		ORA_Z_II_Y	= 0x11,
+		ORA_Z_I		= 0x12,
+		Undefined13	= 0x13,
+		TRB_Z		= 0x14,
+		ORA_Z_I_X	= 0x15,
+		ASL_Z_I_X	= 0x16,
+		RMB1_Z		= 0x17,
+		CLC			= 0x18,
+		ORA_A_I_Y	= 0x19,
+		INC_ACC		= 0x1a,
+		Undefined1b	= 0x1b,
+		TRB_AI		= 0x1c,
+		ORA_A_I_X	= 0x1d,
+		ASL_A_I_X	= 0x1e,
+		BBR1_P		= 0x1f,
+
+		JSR_AI		= 0x20,
+		AND_Z_II_Y	= 0x21,
+		Undefined22	= 0x22,
+		Undefined23	= 0x23,
+		BIT_Z		= 0x24,
+		AND_Z		= 0x25,
+		ROL_Z		= 0x26,
+		RMB2_Z		= 0x27,
+		PLP_S		= 0x28,
+		AND_I		= 0x29,
+		ROL_ACC		= 0x2a,
+		Undefined2b	= 0x2b,
+		BIT_A		= 0x2c,
+		AND_A		= 0x2d,
+		ROL_A		= 0x2e,
+		BBR3_P		= 0x2f
+	};
+
 	struct Pin;
 	class CPU;
 }
