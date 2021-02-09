@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.7)
 
-project(emu6502)
+project(W65C02S)
 
 set_property(GLOBAL PROPERTY USE_FOLADERS ON)
 
-add_subdirectory(6502Emu)
-add_subdirectory(6502Test)
+add_subdirectory(emuW65C02S)
+add_subdirectory(testW65C02S)

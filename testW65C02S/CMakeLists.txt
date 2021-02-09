@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.7)
 
-project(6502Test)
+project(testW65C02S)
 
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DM6502_DEBUG")
 set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} -DM6502_DEBUG")
@@ -37,14 +37,14 @@ add_subdirectory(
 	EXCLUDE_FROM_ALL
 )
 
-set(6502Test_SOURCES
+set(testW65C02S_SOURCES
 	"src/main_test6502.cpp"
 	"src/Test6502LoadRegisters.cpp"
 )
 
-source_group("src" FILES ${6502Test_SOURCES})
+source_group("src" FILES ${testW65C02S_SOURCES})
 
-add_executable(6502Test ${6502Test_SOURCES})
-add_dependencies(6502Test 6502Emu)
-target_link_libraries(6502Test gtest)
-target_link_libraries(6502Test 6502Emu)
+add_executable(testW65C02S ${testW65C02S_SOURCES})
+add_dependencies(testW65C02S emuW65C02S)
+target_link_libraries(testW65C02S gtest)
+target_link_libraries(testW65C02S emuW65C02S)
