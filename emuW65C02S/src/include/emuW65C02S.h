@@ -85,7 +85,8 @@ namespace W65C02S
 
 	struct Pin;
 	class CPU;
-	class Register;
+	class ByteRegister;
+	class WordRegister;
 }
 
 struct W65C02S::Pin
@@ -146,13 +147,25 @@ private:
 	Pin VPB;
 
 	//accumulator
-	Register accumulator;
+	ByteRegister accumulator;
 
 	//index register x
-	Register indexRegisterX;
+	ByteRegister indexRegisterX;
 
 	//index register y
-	Register indexRegisterY;
+	ByteRegister indexRegisterY;
+
+	//stack point register
+	ByteRegister stackPointRegister;
+
+	//instruction register
+	ByteRegister instructionRegister;
+
+	//data bus buffer
+	ByteRegister dataBusBuffer;
+
+	//processor status register
+	WordRegister processorStatusRegister;
 
 public:
 	//address bus
@@ -248,9 +261,41 @@ public:
 	void setVPB(const State& state) { VPB.state = state; }
 };
 
-class W65C02S::Register
+class W65C02S::ByteRegister
 {
 private:
+	//internal data byte
+	Byte data;
 
 public:
+	//get data
+	const Byte& getData() const { return data; }
+
+	//set data
+	void setData(const Byte& data) { this.data = data; }
+};
+
+class W65C02S::WordRegister
+{
+private:
+	//internal data word
+	Word data;
+public:
+	//get data
+	const Word& getWord() const { return data; }
+
+	//set data
+	void setWord(const Word& word) { data = word; }
+
+	//get the high byte of the internal data
+	const Byte& getHighByte();
+
+	//set the high byte of the internal data
+	void setHighByte(const Byte& byte);
+
+	//get the low byte of the internal data
+	const Byte& getLowByte();
+
+	//set the low byte of the internal data
+	void setLowByte(const Byte& byte);
 };
