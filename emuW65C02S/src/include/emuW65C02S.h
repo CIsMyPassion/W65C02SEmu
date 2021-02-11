@@ -12,6 +12,24 @@ namespace W65C02S
 		HIGH = 0x1
 	};
 
+	/* 
+	 * all opcodes
+	 *
+	 * A
+	 * AI
+	 * AIX
+	 * AIY
+	 * ACC
+	 * Z
+	 * ZI
+	 * ZII
+	 * ZIX
+	 * ZIY
+	 * ZIIX
+	 * ZIIY
+	 * P
+	 * S
+	 */
 	enum OpCode : Byte
 	{
 		BRK 		= 0x00,
