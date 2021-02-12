@@ -85,6 +85,29 @@ namespace W65C02S
 		WAI = 0x45
 	};
 
+	/*
+	 * all addressing modes
+	 */
+	enum class AddressingMode : Byte
+	{
+		Absolute						= 0x00,
+		AbsoluteIndexedIndirect			= 0x01,
+		AbsoluteIndexedWithX			= 0x02,
+		AbsoluteIndexedWithY			= 0x03,
+		AbsoluteIndirect				= 0x04,
+		Accumulator						= 0x05,
+		Immediate						= 0x06,
+		Implied							= 0x07,
+		ProgramCounterRelative			= 0x08,
+		Stack							= 0x09,
+		ZeroPage						= 0x0a,
+		ZeroPageIndexedIndirect			= 0x0b,
+		ZeroPageIndexedWithX			= 0x0c,
+		ZeroPageIndexedWithY			= 0x0d,
+		ZeroPageIndirect				= 0x0e,
+		ZeroPageIndirectIndexedWithY	= 0x0f
+	}
+
 	/* 
 	 * all opcodes
 	 *
