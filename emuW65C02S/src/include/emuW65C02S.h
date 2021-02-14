@@ -1,7 +1,7 @@
 #pragma once
 
 #include"typesW65C02S.h"
-#include"instructionsW65C02S.h"
+#include"insW65C02S.h"
 
 namespace W65C02S
 {

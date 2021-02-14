@@ -106,7 +106,7 @@ namespace W65C02S
 		ZeroPageIndexedWithY			= 0x0d,
 		ZeroPageIndirect				= 0x0e,
 		ZeroPageIndirectIndexedWithY	= 0x0f
-	}
+	};
 
 	/* 
 	 * all opcodes

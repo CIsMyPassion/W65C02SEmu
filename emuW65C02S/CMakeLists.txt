@@ -12,7 +12,7 @@ endif()
 set(emuW65C02S_SOURCES
 	src/include/emuW65C02S.h
 	src/include/typesW65C02S.h
-	src/include/instructionsW65C02S.h
+	src/include/insW65C02S.h
 	src/cpuW65C02S.cpp
 )
 
