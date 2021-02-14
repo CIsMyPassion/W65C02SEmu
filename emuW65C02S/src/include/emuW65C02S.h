@@ -3,7 +3,7 @@
 #include"typesW65C02S.h"
 #include"registersW65C02S.h"
 #include"insW65C02S.h"
-#include"instructionDecoderW65C02S.h.h"
+#include"instructionDecoderW65C02S.h"
 
 namespace W65C02S
 {
@@ -15,23 +15,6 @@ namespace W65C02S
 struct W65C02S::Pin
 {
 	State state;
-};
-
-class W65C02S::InstructionDecoder
-{
-private:
-	State clock;
-	Byte instruction;
-
-public:
-	const State& getClock() const { return clock; }
-	
-	void setClock(const State&);
-
-	const Byte& getInstruction() const { return instruction; }
-
-	void setInstruction(const Byte& instruction) { this->instruction = instruction; }
-
 };
 
 class W65C02S::CPU
