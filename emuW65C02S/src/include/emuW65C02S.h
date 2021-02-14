@@ -2,6 +2,7 @@
 
 #include"typesW65C02S.h"
 #include"insW65C02S.h"
+#include"instructionDecoderW65C02S.h.h"
 
 namespace W65C02S
 {
