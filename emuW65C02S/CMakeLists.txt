@@ -15,6 +15,7 @@ set(emuW65C02S_SOURCES
 	src/include/registersW65C02S.h
 	src/include/insW65C02S.h
 	src/include/instructionDecoderW65C02S.h
+	src/instructionDecoderW65C02S.cpp
 	src/cpuW65C02S.cpp
 )
 
