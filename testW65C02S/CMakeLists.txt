@@ -39,7 +39,7 @@ add_subdirectory(
 
 set(testW65C02S_SOURCES
 	"src/main_test6502.cpp"
-	"src/Test6502LoadRegisters.cpp"
+	"src/tests/W65C02STestInstructionDecoding.cpp"
 )
 
 source_group("src" FILES ${testW65C02S_SOURCES})
