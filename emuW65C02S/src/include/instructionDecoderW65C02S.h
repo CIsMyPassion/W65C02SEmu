@@ -21,7 +21,8 @@ private:
 	const Byte ROW6 = 0x0c;
 	const Byte ROW7 = 0x0e;
 	
-	const Byte INSTRUCTION_MASK = 0x0e;
+	const Byte LOWER_HALF_MASK = 0x0e;
+	const Byte UPPER_HALF_MASK = 0xe0;
 
 	Instruction determineROW0Instruction();
 	Instruction determineROW1Instruction();
