@@ -13,13 +13,13 @@ private:
 	Byte opCode;
 
 	const Byte ROW0 = 0x00;
-	const Byte ROW1 = 0x02;
-	const Byte ROW2 = 0x04;
-	const Byte ROW3 = 0x06;
-	const Byte ROW4 = 0x08;
-	const Byte ROW5 = 0x0a;
-	const Byte ROW6 = 0x0c;
-	const Byte ROW7 = 0x0e;
+	const Byte ROW1 = 0x20;
+	const Byte ROW2 = 0x40;
+	const Byte ROW3 = 0x60;
+	const Byte ROW4 = 0x80;
+	const Byte ROW5 = 0xa0;
+	const Byte ROW6 = 0xc0;
+	const Byte ROW7 = 0xe0;
 	
 	const Byte LOWER_HALF_MASK = 0x0e;
 	const Byte UPPER_HALF_MASK = 0xe0;

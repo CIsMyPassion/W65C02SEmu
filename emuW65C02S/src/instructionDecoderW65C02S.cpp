@@ -127,8 +127,73 @@ W65C02S::Instruction W65C02S::InstructionDecoder::determineROW0Instruction()
 
 W65C02S::Instruction W65C02S::InstructionDecoder::determineROW1Instruction()
 {
-	throw 1;
-	return Instruction::LDA;
+	if (opCode == (Byte) OpCode::JSR_AI)
+	{
+		return Instruction::JSR;
+	}
+	else if (opCode == (Byte) OpCode::AND_ZII ||
+			opCode == (Byte) OpCode::AND_Z ||
+			opCode == (Byte) OpCode::AND_I ||
+			opCode == (Byte) OpCode::AND_A ||
+			opCode == (Byte) OpCode::AND_ZIIY ||
+			opCode == (Byte) OpCode::AND_ZI ||
+			opCode == (Byte) OpCode::AND_ZIX ||
+			opCode == (Byte) OpCode::AND_AIY ||
+			opCode == (Byte) OpCode::AND_AIX)
+	{
+		return Instruction::AND;
+	}
+	else if (opCode == (Byte) OpCode::BIT_Z ||
+			opCode == (Byte) OpCode::BIT_A ||
+			opCode == (Byte) OpCode::BIT_ZIX ||
+			opCode == (Byte) OpCode::BIT_AIX)
+	{
+		return Instruction::BIT;
+	}
+	else if (opCode == (Byte) OpCode::ROL_Z ||
+			opCode == (Byte) OpCode::ROL_ACC ||
+			opCode == (Byte) OpCode::ROL_A ||
+			opCode == (Byte) OpCode::ROL_ZIX ||
+			opCode == (Byte) OpCode::ROL_AIX)
+	{
+		return Instruction::ROL;
+	}
+	else if (opCode == (Byte) OpCode::RMB2_Z)
+	{
+		return Instruction::RMB2;
+	}
+	else if (opCode == (Byte) OpCode::PLP_S)
+	{
+		return Instruction::PLP;
+	}
+	else if (opCode == (Byte) OpCode::BBR2_P)
+	{
+		return Instruction::BBR2;
+	}
+	else if (opCode == (Byte) OpCode::BMI_P)
+	{
+		return Instruction::BMI;
+	}
+	else if (opCode == (Byte) OpCode::RMB3_Z)
+	{
+		return Instruction::RMB3;
+	}
+	else if (opCode == (Byte) OpCode::SEC)
+	{
+		return Instruction::SEC;
+	}
+	else if (opCode == (Byte) OpCode::DEC_ACC)
+	{
+		return Instruction::DEC;
+	}
+	else if (opCode == (Byte) OpCode::BBR3_P)
+	{
+		return Instruction::BBR3;
+	}
+	else
+	{
+		throw 1;
+	}
 }
 
 W65C02S::Instruction W65C02S::InstructionDecoder::determineROW2Instruction()
